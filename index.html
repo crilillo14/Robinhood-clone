@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Robinhood Clone</title>
+</head>
+
+<style>
+    .web-app-emotion-cache-gtc0gl {
+        fill: var(--rh__neutral-fg1);
+    }
+    * {
+        border: 1px solid red; /* Add your desired border style */
+    }
+    
+
+    body{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background: rgba(0, 0, 0, 0.292);
+        display: flex;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        width: 100%;
+    
+    }
+    
+    #home {
+        max-width: 48px;
+        max-height: 48px;
+    }
+    
+    #searchbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        
+    }
+    button{
+        max-width: 24px;
+        max-height: 24px;
+    }
+    
+    #search-icon{
+        color: white;
+        max-width: 24px;
+        max-height: 24px;
+    }
+    #search-button {
+        position: relative;
+        padding: 0;
+        margin: 0;
+    }
+
+    #home:hover {
+        color: rgb(0 200 7);
+    }
+</style>
+
+<body>
+    <nav>
+        <div id="home">
+            <a href="">
+                <img src="leaf.svg" alt="home">
+            </a>
+        </div>
+        <div id="searchbar">
+            <form action="#">
+                <input type="text" name="search" id="searchbox" placeholder="Search">
+                <button type="submit" id="search-button">
+                    <img id="search-icon" src="svgs/magnifying.svg" alt="Search Icon">
+                </button>
+            </form>
+        </div>
+    </nav>
+</body>
+</html>
