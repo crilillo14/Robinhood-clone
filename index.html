@@ -3,82 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="capsuula-fontfacekit/web fonts/capsuula_regular_macroman/stylesheet.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="style.css">
     <title>Robinhood Clone</title>
 </head>
 
 <style>
-    .web-app-emotion-cache-gtc0gl {
-        fill: var(--rh__neutral-fg1);
+    body {
+        font-family: 'capsuularegular';
+        font-weight: bold ;
+        background-color: black;
+        font-size: 16px;
+        font-weight: bolder;
+        letter-spacing: 1px;
+        margin: 0px;
+        color: white;
     }
-    * {
-        border: 1px solid red; /* Add your desired border style */
-    }
-    
-
-    body{
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        background: rgba(0, 0, 0, 0.292);
-        display: flex;
-    }
-
     nav {
+        margin: 0px;
+        position: sticky;
+        top: 0px;
+        left: 0px;
         display: flex;
         justify-content: space-between;
-        position: sticky;
-        top: 0;
-        width: 100%;
-    
+        align-items: center;
+        background-color: black;
     }
-    
-    #home {
-        max-width: 48px;
-        max-height: 48px;
-    }
-    
+
     #searchbar {
         display: flex;
-        flex-direction: row;
+        justify-content: center;
         align-items: center;
-
-        
+        width: 480px;
+        height: 36px;
+        border: 0.5px solid rgba(145, 159, 166, 1);
+        border-radius: 4px;
+        position: relative;
+        color: rgba(145, 159, 166, 1);
     }
-    button{
-        max-width: 24px;
-        max-height: 24px;
+
+    #searchbar:hover {background-color: rgb(33,33,33);}
+
+    form {
+        width: 438px;
+        position: relative;
+    }
+
+    #search {
+        height: 34px;
+        width: 438px;
+        fill: black;
+        color: white;
+        background-color: rgba(0, 0, 0, 0);
+        outline: none;
+        padding: none;
+        border: none;
+        font: inherit;
+        padding-inline: 2px;
+    }
+
+    #search:focus{
+        border-color: white;
+        text-decoration: solid;
+        color: white;
+    }
+    #searchbutton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        fill: rgba(145, 159, 166, 1);
+        margin-right: 6px;
     }
     
-    #search-icon{
-        color: white;
-        max-width: 24px;
-        max-height: 24px;
+
+    #toprightlist {
+        display: flex;
+        gap: 20px;
+        padding-right: 30px;
     }
-    #search-button {
+
+    ol {
         position: relative;
-        padding: 0;
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
         margin: 0;
     }
 
-    #home:hover {
-        color: rgb(0 200 7);
+    li {list-style: none;}
+
+    a.navlinks {
+            text-decoration: none;
+            color: white;
     }
+    a.navlinks:hover {color: #00c805;}
+
+    #home {
+        max-width: 48px;
+        object-fit: scale-down;
+
+    }
+    #home:hover {fill: #00c805;}
+
+
+    .container {
+        display: flex;
+        padding: 24px 0px;
+        box-sizing: border-box;
+
+    }
+
+    main {
+        flex: 1;
+        width: 80%;
+        height: 3000px;
+        margin-left: 12px;
+        margin-right: 12px;
+        visibility: visible;
+        min-width: 0px;
+        padding-top: 36px;
+        padding-right: 24px;
+        border: 2px solid white;
+        overflow: auto;
+    }
+
+    aside {
+        position: sticky;
+        left: 918px;
+        top: 80px;
+        height: 100%;
+        width: 20%;
+        visibility: visible;
+        box-sizing: content-box;
+        overflow-y: auto;
+        padding: 36px 24px 24px;
+        border: 2px solid white;
+    }
+    #asidecontents{
+        display: flex;
+        border: 1px solid rgb(33, 33, 33);
+        border-radius: 4px;
+        flex-direction: column;
+    }
+
+    .stockheader{
+        display: flex;
+        float: left;
+        width: 100%;
+        padding: 0 24px;
+    }
+
+
+
+
 </style>
 
 <body>
     <nav>
         <div id="home">
-            <a href="">
-                <img src="leaf.svg" alt="home">
+            <a href="#">
+                <img id="home" src="images/robinhood-2 (2).svg" alt="home">
             </a>
         </div>
+
         <div id="searchbar">
-            <form action="#">
-                <input type="text" name="search" id="searchbox" placeholder="Search">
-                <button type="submit" id="search-button">
-                    <img id="search-icon" src="svgs/magnifying.svg" alt="Search Icon">
-                </button>
+            <a href="#">
+                <img id = "searchbutton" src="images/search.svg" alt="but">
+            </a>
+            <form action="#" autocomplete="off">
+                <input autocomplete="off" type="text" placeholder="Search" id = "search">
+                
             </form>
         </div>
+
+        <div id="toprightlist">
+            <ol>
+                <li>
+                    <a class="navlinks" href="">Rewards</a>
+                </li>
+                <li>
+                    <a class="navlinks" href="">Rewards</a>
+                </li>
+                <li>
+                    <a class="navlinks" href="">Rewards</a>
+                </li>
+                <li>
+                    <a class="navlinks" href="">Rewards</a>
+                </li>
+                <li>
+                    <a class="navlinks" href="">Rewards</a>
+                </li>
+                <li>
+                    <a class="navlinks" href="">Rewards</a>
+                </li>
+                <li>
+                    <a class="navlinks" href="">Rewards</a>
+                </li>
+            </ol>
+        </div>
     </nav>
+
+    <div class="container">
+        <main>
+        Me cago en la puta hostia coño
+        </main>
+    
+        <aside>
+            <div id="asidecontents">
+
+                <div class="stockheader">
+                    <span class="stockheadertext">Cryptocurrencies</span>
+                </div>
+                <div class="stocklist">
+                    <div class="stock"></div>
+                    <div class="stock"></div>
+                    <div class="stock"></div>
+                    <div class="stock"></div>
+                </div>
+                <details class="dropstocklist">
+                    <summary>Cryptos to Watch</summary>
+                </details>
+
+            </div>
+
+        </aside>
+    </div>
+
+
+
 </body>
 </html>
