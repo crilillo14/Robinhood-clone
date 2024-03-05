@@ -463,11 +463,18 @@ a.time:focus {
     padding: 22px 23px;
     border-radius: 5px;
     text-decoration: none;
-    background-color: rgba(33, 33, 33, 0.503);
     height: 140px;
     width: 112px;
     max-width: 112px;
     justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.319);
+    transition: all 1ms ease-in-out;
+}
+
+.mover:hover {
+    border: 0px;
+    background-color: rgba(33, 33, 33);
+
 }
 
 .company {
@@ -628,4 +635,8 @@ a.time:focus {
     text-decoration: underline;
     color: white;
     font-weight: 800;
+}
+
+.footnotelinks:hover {
+    color: #00c805;
 }
