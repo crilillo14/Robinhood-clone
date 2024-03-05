@@ -3,170 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="capsuula-fontfacekit/web fonts/capsuula_regular_macroman/stylesheet.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Robinhood Clone</title>
 </head>
 
-<style>
-    body {
-        font-family: 'capsuularegular';
-        font-weight: bold ;
-        background-color: black;
-        font-size: 16px;
-        font-weight: bolder;
-        letter-spacing: 1px;
-        margin: 0px;
-        color: white;
-    }
-    nav {
-        margin: 0px;
-        position: sticky;
-        top: 0px;
-        left: 0px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: black;
-    }
-
-    #searchbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 480px;
-        height: 36px;
-        border: 0.5px solid rgba(145, 159, 166, 1);
-        border-radius: 4px;
-        position: relative;
-        color: rgba(145, 159, 166, 1);
-    }
-
-    #searchbar:hover {background-color: rgb(33,33,33);}
-
-    form {
-        width: 438px;
-        position: relative;
-    }
-
-    #search {
-        height: 34px;
-        width: 438px;
-        fill: black;
-        color: white;
-        background-color: rgba(0, 0, 0, 0);
-        outline: none;
-        padding: none;
-        border: none;
-        font: inherit;
-        padding-inline: 2px;
-    }
-
-    #search:focus{
-        border-color: white;
-        text-decoration: solid;
-        color: white;
-    }
-    #searchbutton {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 24px;
-        height: 24px;
-        fill: rgba(145, 159, 166, 1);
-        margin-right: 6px;
-    }
-    
-
-    #toprightlist {
-        display: flex;
-        gap: 20px;
-        padding-right: 30px;
-    }
-
-    ol {
-        position: relative;
-        display: flex;
-        list-style: none;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-        margin: 0;
-    }
-
-    li {list-style: none;}
-
-    a.navlinks {
-            text-decoration: none;
-            color: white;
-    }
-    a.navlinks:hover {color: #00c805;}
-
-    #home {
-        max-width: 48px;
-        object-fit: scale-down;
-
-    }
-    #home:hover {fill: #00c805;}
-
-
-    .container {
-        display: flex;
-        padding: 24px 0px;
-        box-sizing: border-box;
-
-    }
-
-    main {
-        flex: 1;
-        width: 80%;
-        height: 3000px;
-        margin-left: 12px;
-        margin-right: 12px;
-        visibility: visible;
-        min-width: 0px;
-        padding-top: 36px;
-        padding-right: 24px;
-        border: 2px solid white;
-        overflow: auto;
-    }
-
-    aside {
-        position: sticky;
-        left: 918px;
-        top: 80px;
-        height: 100%;
-        width: 20%;
-        visibility: visible;
-        box-sizing: content-box;
-        overflow-y: auto;
-        padding: 36px 24px 24px;
-        border: 2px solid white;
-    }
-    #asidecontents{
-        display: flex;
-        border: 1px solid rgb(33, 33, 33);
-        border-radius: 4px;
-        flex-direction: column;
-    }
-
-    .stockheader{
-        display: flex;
-        float: left;
-        width: 100%;
-        padding: 0 24px;
-    }
-
-
-
-
-</style>
 
 <body>
     <nav>
         <div id="home">
             <a href="#">
-                <img id="home" src="images/robinhood-2 (2).svg" alt="home">
+                <img id="leaf" src="images/favicon.png" alt="home">
             </a>
         </div>
 
@@ -181,37 +28,271 @@
         </div>
 
         <div id="toprightlist">
-            <ol>
+            <ol id = "rightlist">
                 <li>
                     <a class="navlinks" href="">Rewards</a>
                 </li>
                 <li>
-                    <a class="navlinks" href="">Rewards</a>
+                    <a class="navlinks" href="">Investing</a>
                 </li>
                 <li>
-                    <a class="navlinks" href="">Rewards</a>
+                    <a class="navlinks" href="">Crypto</a>
                 </li>
                 <li>
-                    <a class="navlinks" href="">Rewards</a>
+                    <a class="navlinks" href="">Spending</a>
                 </li>
                 <li>
-                    <a class="navlinks" href="">Rewards</a>
+                    <a class="navlinks" href="">Retirement</a>
                 </li>
                 <li>
-                    <a class="navlinks" href="">Rewards</a>
+                    <a class="navlinks" href="">Notifications</a>
                 </li>
                 <li>
-                    <a class="navlinks" href="">Rewards</a>
+                    <a class="navlinks" href="">Account</a>
                 </li>
             </ol>
         </div>
     </nav>
 
     <div class="container">
+
+
+
+
         <main>
-        Me cago en la puta hostia coño
+            <div class = "moners">
+                <div class = "counter">
+                    <span>$7,433,059,024.59</span>
+                </div>
+                <div class="counterstatus">
+                    <span class="moneyup">▲ $1,161,024 (8.2%)</span>
+                    <span>Today</span>
+                </div>
+            </div>
+            <div id = chartcontainer>
+                <img id = "chart" src="images/chart.png" alt="frea">
+            </div>
+
+            <div class = "timeframes">
+                <ol class="times">
+                    <li>
+                        <a class="time" href="#">●Live</a>
+                    </li>
+                    <li>
+                        <a class="time" href="#">1D</a>
+                    </li>
+                    <li>
+                        <a class="time" href="#">1W</a>
+                    </li>
+                    <li>
+                        <a class="time" href="#">1M</a>
+                    </li>
+                    <li>
+                        <a class="time" href="#">3M</a>
+                    </li>
+                    <li>
+                        <a class="time" href="#">1Y</a>
+                    </li>
+                    <li>
+                        <a class="time" href="#">5Y</a>
+                    </li>
+                    <li>
+                        <a class="time" href="#">ALL</a>
+                    </li>
+                </ol>
+            </div>
+
+            <div class = "buyingpower">
+                <span>Buying Power</span>
+                <span>$171.22</span>
+            </div>
+
+            <div class="dailymovers">
+
+                <div class="moversheader">
+                    <span class = "bigheader">Daily Movers</span>
+                    <span class = "subheader">Stocks making the biggest moves today.</span>
+                </div>
+                
+                <div class="moverscontainer">
+                    <ol class="moverslist">
+                        <li>
+                            <a class="mover" href="#">
+                                <span class="company">Sana Biotechnology</span>
+                                <div class = "dailystatus">
+                                    <span class="pricedown">$9.39</span>
+                                    <span class="changedown">-16.68%</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="mover" href="#">
+                                <span class="company">Mount Gibson Iron Ltd.</span>
+                                <div class = "dailystatus">
+                                    <span class="pricedown">$3.00</span>
+                                    <span class="changedown">-16.90%</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="mover" href="#">
+                                <span class="company">Super Micro Computer</span>
+                                <div class = "dailystatus">
+                                    <span class="priceup">$1,062.13</span>
+                                    <span class="changeup">+17.30%</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="mover" href="#">
+                                <span class="company">MGE Energy</span>
+                                <div class = "dailystatus">
+                                    <span class="priceup">$74.10</span>
+                                    <span class="changeup">+17.27%</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="mover" href="#">
+                                <span class="company">MicroStrategy</span>
+                                <div class = "dailystatus">
+                                    <span class="priceup">$1,324.34</span>
+                                    <span class="changeup">+22.69%</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="mover" href="#">
+                                <span class="company">Phunware</span>
+                                <div class = "dailystatus">
+                                    <span class="priceup">$14.40</span>
+                                    <span class="changeup">103.40%</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="mover" href="#">
+                                <span class="company">New York Community Bank</span>
+                                <div class = "dailystatus">
+                                    <span class="pricedown">$2.76</span>
+                                    <span class="changedown">-21.41%</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            
+
+            <div class="news">
+                <div class="newsheader">
+                    <span>News</span>
+                </div>
+                
+                <a class = "newsentry" href="https://investorplace.com/2024/03/dogwifhat-price-predictions-where-will-the-red-hot-wif-crypto-go-next/">
+                    <div class = "newstext">
+                        <div class="source">
+                            <span class="name">InvestorPlace</span>
+                            <span class="timestamp">6h</span>
+                        </div>
+                        <div class="headline">
+                            <span>DogwifHat Price Predictions: Where will the red-hot WIF crypto Go Next?</span>
+                        </div>
+                        <div class="summary">
+                            <span>These stocks are poised to benefit from the continued growth of e-commerce.</span>
+                        </div>
+                    </div>
+
+                
+                    <div class = "image">
+                        <img class = "newsimage" src="https://investorplace.com/wp-content/uploads/2023/01/meme-stock-doge-shiba-inu-dog-1600.jpg" alt="">
+                    </div>
+                    
+                </a>
+                <a class = "newsentry" href="https://www.fool.com/investing/2024/03/25/why-tesla-stock-is-a-buy/">
+                    <div class = "newstext">
+                        <div class="source">
+                            <span class="name">Techtelegraph</span>
+                            <span class="timestamp">8h</span>
+                        </div>
+                        <div class="headline">
+                            <span>Crypto Stocks Rally After Massive $1.8B Bitcoin, ETF ETH Inflow</span>
+                        </div>
+                        <div class="summary">
+                            <span>In a stunning turn of events, the cryptocurrency market has witnessed a surge in crypto stocks following a massive influx of $1.8 billion into Bitcoin and Ethereum markets.</span>
+                        </div>
+                    </div>
+
+                
+                    <div class = "image">
+                        <img class = "newsimage" src="https://cloud.iexapis.com/v1/news/image/3d4PNeVYUs2AeAyQcvetgFkGGNtf45gD9DviSrvzu1m6" alt="">
+                    </div>
+                </a>
+                <a class = "newsentry" href="">
+                    <div class = "newstext">
+                        <div class="source">
+                            <span class="name">Benzinga</span>
+                            <span class="timestamp">21h</span>
+                        </div>
+                        <div class="headline">
+                            <span>Jim Cramer Says Succesful Reddit IPO Could Spell Trouble For Stocks: "Those who want the bull to continue Must Root Against This Deal"</span>
+                        </div>
+                        <div class="summary">
+                            <span>With the stock down 30% from its highs, is it time to buy Tesla?</span>
+                        </div>
+                    </div>
+
+                
+                    <div class = "image">
+                        <img class = "newsimage" src="https://cdn.benzinga.com/files/images/story/2024/Reddit_4.jpeg?optimize=medium&dpr=1&auto=webp&height=800&width=1456&fit=crop" alt="">
+                    </div>
+                </a>
+                <a class = "newsentry" href="https://investorplace.com/2024/03/the-top-3-dow-stocks-to-buy-in-march-2024/">
+                    <div class = "newstext">
+                        <div class="source">
+                            <span class="name">Benzinga</span>
+                            <span class="timestamp">21h</span>
+                        </div>
+                        <div class="headline">
+                            <span>The Top 3 Dow Stocks to Buy in March 2024</span>
+                        </div>
+                        <div class="summary">
+                            <span>The Dow Jones Industrial Average is the oldest U.S. market index, created on May 26, 1896. Throughout history, its components have been large, established American businesses with competitive advantages.</span>
+                        </div>
+                    </div>
+
+                
+                    <div class = "image">
+                        <img class = "newsimage" src="https://investorplace.com/wp-content/uploads/2019/07/dowjones1600d.jpg" alt="">
+                    </div>
+                </a>
+                <a class = "newsentry" href="https://techtelegraph.co.uk/apples-new-m3-macbook-air-is-already-discounted-at-best-buy/">
+                    <div class = "newstext">
+                        <div class="source">
+                            <span class="name">Techtelegraph</span>
+                            <span class="timestamp">1h</span>
+                        </div>
+                        <div class="headline">
+                            <span>Apple's New MacBookAir is Already Discounted at Best Buy</span>
+                        </div>
+                        <div class="summary">
+                            <span>Get a discount on Apple's new M3 MacBook Air. My Best Buy Plus members can save $50 on Apple's brand-new M3 MacBook Air in both the 13-inch and 15-inch screen sizes.</span>
+                        </div>
+                    </div>
+
+                
+                    <div class = "image">
+                        <img class = "newsimage" src="https://cloud.iexapis.com/v1/news/image/Z7IBgYEJ705FcXwSsMxuxY85CdxKfqUQS5nvzwPRWC3" alt="">
+                    </div>
+                </a>
+            </div>
+
+            <div class = "footnote">
+                <span>For more information, see our <a class = "footnotelinks" href="">Disclosures</a> and <a href="" class = "footnotelinks">Privacy Policy</a>.</span>
+                <span>Options are risky and aren't suitable for all investors. To learn more, read the <a class = "footnotelinks" href="">Options Disclosure Document</a>.</span>
+            </div>
         </main>
-    
+
         <aside>
             <div id="asidecontents">
 
@@ -219,17 +300,135 @@
                     <span class="stockheadertext">Cryptocurrencies</span>
                 </div>
                 <div class="stocklist">
-                    <div class="stock"></div>
-                    <div class="stock"></div>
-                    <div class="stock"></div>
-                    <div class="stock"></div>
+                    <a href = "#" class="stock">
+                        <div class="stocklisting">
+                            <span class="stockabrev">BTC</span>
+                            <span class="shares">1.00029</span>
+                        </div>
+                        <img class = "minichart" src="images/chart.png" alt="">
+                        <div class="stockstatus">
+                            <span class="stockstatusprice">$55,342.92</span>
+                            <span class="indicator">+2.2%</span>
+                        </div>
+                    </a>
+                    <a href = "#" class="stock">
+                        <div class="stocklisting">
+                            <span class="stockabrev">ETH</span>
+                            <span class="shares">0.0005523</span>
+                        </div>
+                        <img class = "minichart" src="images/chart.png" alt="">
+                        <div class="stockstatus">
+                            <span class="stockstatusprice">$342.92</span>
+                            <span class="indicator">+2.4%</span>
+                        </div>
+                    </a>
+                    <a href = "#" class="stock">
+                        <div class="stocklisting">
+                            <span class="stockabrev">LTC</span>
+                            <span class="shares">123,233.55</span>
+                        </div>
+                        <img class = "minichart" src="images/chart.png" alt="">
+                        <div class="stockstatus">
+                            <span class="stockstatusprice">$542.92</span>
+                            <span class="indicator">+12.1%</span>
+                        </div>
+                    </a>
+                    <a href = "#" class="stock">
+                        <div class="stocklisting">
+                            <span class="stockabrev">DOGE</span>
+                            <span class="shares">243,765.54</span>
+                        </div>
+                        <img class = "minichart" src="images/chart.png" alt="">
+                        <div class="stockstatus">
+                            <span class="stockstatusprice">$5,556.32</span>
+                            <span class="indicator">+0.22%</span>
+                        </div>
+
+                    </a>
                 </div>
-                <details class="dropstocklist">
-                    <summary>Cryptos to Watch</summary>
-                </details>
-
+                <div class="stockheader">
+                    <span class="stockheadertext">Stocks</span>
+                </div>
+                <div class="stocklist">
+                    <a href = "#" class="stock">
+                        <div class="stocklisting">
+                            <span class="stockabrev">AAPL</span>
+                            <span class="shares">1.00029</span>
+                        </div>
+                        <img class = "minichart" src="images/chart.png" alt="">
+                        <div class="stockstatus">
+                            <span class="stockstatusprice">$55,342.92</span>
+                            <span class="indicator">+2.2%</span>
+                        </div>
+                    </a>
+                    <a href = "#" class="stock">
+                        <div class="stocklisting">
+                            <span class="stockabrev">TSLA</span>
+                            <span class="shares">0.0005523</span>
+                        </div>
+                        <img class = "minichart" src="images/chart.png" alt="">
+                        <div class="stockstatus">
+                            <span class="stockstatusprice">$342.92</span>
+                            <span class="indicator">+2.4%</span>
+                        </div>
+                    </a>
+                    <a href = "#" class="stock">
+                        <div class="stocklisting">
+                            <span class="stockabrev">AMZN</span>
+                            <span class="shares">123,233.55</span>
+                        </div>
+                        <img class = "minichart" src="images/chart.png" alt="">
+                        <div class="stockstatus">
+                            <span class="stockstatusprice">$542.92</span>
+                            <span class="indicator">+12.1%</span>
+                        </div>
+                    </a>
+                    <a href = "#" class="stock">
+                        <div class="stocklisting">
+                            <span class="stockabrev">GOOGL</span>
+                            <span class="shares">243,765.54</span>
+                        </div>
+                        <img class = "minichart" src="images/chart.png" alt="">
+                        <div class="stockstatus">
+                            <span class="stockstatusprice">$5,556.32</span>
+                            <span class="indicator">+0.22%</span>
+                        </div>
+                    </a>
+                    <a href = "#" class="stock">
+                        <div class="stocklisting">
+                            <span class="stockabrev">MSFT</span>
+                            <span class="shares">243,765.54</span>
+                        </div>
+                        <img class = "minichart" src="images/chart.png" alt="">
+                        <div class="stockstatus">
+                            <span class="stockstatusprice">$5,556.32</span>
+                            <span class="indicator">+0.22%</span>
+                        </div>
+                    </a>
+                    <a class="stock" href="#">
+                        <div class="stocklisting">
+                            <span class="stockabrev">FB</span>
+                            <span class="shares">243,765.54</span>
+                        </div>
+                        <img class = "minichart" src="images/chart.png" alt="">
+                        <div class="stockstatus">
+                            <span class="stockstatusprice">$5,556.32</span>
+                            <span class="indicator">+0.22%</span>
+                        </div>
+                    </a>
+                    <a class="stock" href = "#">
+                        <div class="stocklisting">
+                            <span class="stockabrev">NFLX</span>
+                            <span class="shares">243,765.54</span>
+                        </div>
+                        <img class = "minichart" src="images/chart.png" alt="">
+                        <div class="stockstatus">
+                            <span class="stockstatusprice">$5,556.32</span>
+                            <span class="indicator">+0.22%</span>
+                        </div>
+                    </a>
+                </div>
             </div>
-
         </aside>
     </div>
 
